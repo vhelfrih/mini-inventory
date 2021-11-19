@@ -33,11 +33,15 @@ export default function AddItems(props) {
   };
 
   return (
-    // <Box display="flex">
-    // <Box >
     <form onSubmit={submitHandler}>
-      <Grid container justify="space-between" spacing={2}>
-        <Grid item xs={2} sm={4} md={4}>
+      <Grid
+        container
+        alignItems="center"
+        justifyContent="center"
+        flexWrap="wrap"
+        spacing={2}
+        >
+        <Grid item xs={3} sm={4} >
           <TextField
             label="Name"
             id="outlined-size-small"
@@ -50,7 +54,7 @@ export default function AddItems(props) {
           />
         </Grid>
 
-        <Grid item xs={2} sm={4} md={4}>
+        <Grid item xs={3} sm={4}>
           <TextField
             label="Amount"
             id="outlined-size-small"
@@ -63,8 +67,8 @@ export default function AddItems(props) {
           />
         </Grid>
 
-        <Grid item xs={2} sm={4} md={4}>
-          <FormControl>
+        <Grid item >
+          <FormControl xs={3} sm={4} >
             <InputLabel id="demo-simple-select-label">Place</InputLabel>
             <Select
               labelId="demo-simple-select-label"
@@ -86,7 +90,8 @@ export default function AddItems(props) {
           </FormControl>
         </Grid>
 
-        <Grid item xs={2} sm={4} md={6}>
+        <Grid item>
+        <FormControl xs={3} sm={4}>
           <InputLabel id="date"></InputLabel>
           <TextField
             id="date"
@@ -102,10 +107,11 @@ export default function AddItems(props) {
               shrink: true,
             }}
           />
+          </FormControl>
         </Grid>
 
-        <Grid item xs={12} sm={4} md={4}>
-          <FormControl>
+        <Grid item >
+          <FormControl xs={3} sm={4}>
             <InputLabel id="demo-simple-select-helper-label">
               Category
             </InputLabel>
@@ -142,21 +148,14 @@ export default function AddItems(props) {
             </Select>
           </FormControl>
         </Grid>
-        <Grid
-          container
-          justifyContent="center"
-          spacing={3}
-          my="10px"
-        >
+        <Grid container justifyContent="center" spacing={3} my="10px">
           {/* <Grid item > */}
-            <Button type="submit" style={{ width: "20%", height: "40px" }}>
-              Add Item
-            </Button>
+          <Button type="submit" style={{ width: "20%", height: "40px" }}>
+            Add Item
+          </Button>
           {/* </Grid> */}
         </Grid>
       </Grid>
     </form>
-    //   </Box>
-    // </Box>
   );
 }

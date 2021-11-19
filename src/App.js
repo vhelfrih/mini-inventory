@@ -124,25 +124,25 @@ const App = (props) => {
           </Grid>
         </Grid>
 
-        <Grid
+        {/* <Grid
           container
           justifyContent="center"
           alignItems="center"
+          alignContent="space-between"
           spacing={2}
-          // overflow="hidden"
           my="10px"
-        >
-          <Grid item >
+        > */}
+          {/* <Grid item> */}
             <AddItems
               onAddIngredient={addIngredientHandler}
               loading={isLoading}
             />
-          </Grid>
+          {/* </Grid> */}
 
           <Grid item justifyContent="center" alignItems="center">
             <EnhancedTable rows={rows} onRemoveItem={removeItemHandler} />
           </Grid>
-        </Grid>
+        {/* </Grid> */}
       </Paper>
     </ThemeProvider>
   );
