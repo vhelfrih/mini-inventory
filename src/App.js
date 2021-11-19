@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import React from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
@@ -9,7 +9,6 @@ import EnhancedTable from "./components/Ingredients/EnhancedTable";
 import AddItems from "./components/Ingredients/AddIngredient";
 import { CssBaseline, Grid } from "@mui/material";
 import ButtonAppBar from "./components/UI/Header";
-import { Box } from "@mui/system";
 
 const App = (props) => {
   const [rows, setRows] = useState([]);
